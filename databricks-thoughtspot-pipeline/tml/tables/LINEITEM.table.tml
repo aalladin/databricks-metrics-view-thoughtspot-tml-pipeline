@@ -1,0 +1,118 @@
+table:
+  name: LINEITEM
+  db: ts_agent_demo
+  schema: sales
+  db_table: lineitem
+  connection:
+    name: Databricks MV
+  columns:
+  - name: L_ORDERKEY
+    db_column_name: l_orderkey
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: L_PARTKEY
+    db_column_name: l_partkey
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: L_SUPPKEY
+    db_column_name: l_suppkey
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: L_LINENUMBER
+    db_column_name: l_linenumber
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: INT64
+  - name: L_QUANTITY
+    db_column_name: l_quantity
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: L_EXTENDEDPRICE
+    db_column_name: l_extendedprice
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: L_DISCOUNT
+    db_column_name: l_discount
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: L_TAX
+    db_column_name: l_tax
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DOUBLE
+  - name: L_RETURNFLAG
+    db_column_name: l_returnflag
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: L_LINESTATUS
+    db_column_name: l_linestatus
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: L_SHIPDATE
+    db_column_name: l_shipdate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: L_COMMITDATE
+    db_column_name: l_commitdate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: L_RECEIPTDATE
+    db_column_name: l_receiptdate
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: L_SHIPINSTRUCT
+    db_column_name: l_shipinstruct
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: L_SHIPMODE
+    db_column_name: l_shipmode
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: L_COMMENT
+    db_column_name: l_comment
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  properties:
+    spotter_config:
+      is_spotter_enabled: false
